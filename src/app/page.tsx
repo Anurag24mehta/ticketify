@@ -1,101 +1,89 @@
-import Image from "next/image";
+"use client";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+      <section className="relative flex items-center justify-center">
+        <div className="relative items-center w-full py-12 lg:py-20">
+          <div className="text-center">
+          <span className="text-sm text-primary font-medium tracking-tight bg-primary/10 px-4 py-2 rounded-full">
+            Introducing Ticketify 1.0
+          </span>
+
+            <h1 className="mt-8 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-none">
+              Scheduling made{" "}
+              <span className="block text-primary">super easy!</span>
+            </h1>
+
+            <p className="max-w-xl mx-auto mt-4   lg:text-lg text-muted-foreground ">
+              Scheduling a meeting can be a pain. But we at CalMarshal make it
+              easy for your clients to schedule meetings with you.
+            </p>
+            <div className=" mt-5 mb-12">
+              <Button asChild>
+                <Link href="/dashboard">Buy Now</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative items-center w-full py-12 mx-auto mt-12">
+            <svg
+                className="absolute inset-0 -mt-24 blur-3xl"
+                style={{ zIndex: -1 }}
+                fill="none"
+                viewBox="0 0 400 400"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clipPath="url(#clip0_10_20)">
+                <g filter="url(#filter0_f_10_20)">
+                  <path
+                      d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z"
+                      fill="#03FFE0"
+                  ></path>
+                  <path
+                      d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z"
+                      fill="#7C87F8"
+                  ></path>
+                  <path
+                      d="M320 400H400V78.75L106.2 134.75L320 400Z"
+                      fill="#4C65E4"
+                  ></path>
+                  <path
+                      d="M400 0H128.6L106.2 134.75L400 78.75V0Z"
+                      fill="#043AFF"
+                  ></path>
+                </g>
+              </g>
+              <defs>
+                <filter
+                    colorInterpolationFilters="sRGB"
+                    filterUnits="userSpaceOnUse"
+                    height="720.666"
+                    id="filter0_f_10_20"
+                    width="720.666"
+                    x="-160.333"
+                    y="-160.333"
+                >
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+                  <feBlend
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      mode="normal"
+                      result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                      result="effect1_foregroundBlur_10_20"
+                      stdDeviation="80.1666"
+                  ></feGaussianBlur>
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
   );
 }

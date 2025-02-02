@@ -13,13 +13,13 @@ export default function Home() {
           </span>
 
             <h1 className="mt-8 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-none">
-              Scheduling made{" "}
-              <span className="block text-primary">super easy!</span>
+              Own. Trade. Experience.{" "}
+              <span className="block text-primary">The Future of Ticketing.</span>
             </h1>
 
             <p className="max-w-xl mx-auto mt-4   lg:text-lg text-muted-foreground ">
-              Scheduling a meeting can be a pain. But we at CalMarshal make it
-              easy for your clients to schedule meetings with you.
+              Ticketify is a decentralized NFT-based ticketing system
+              for secure event access, with features for booking, resale, and ticket expiration.
             </p>
             <div className=" mt-5 mb-12">
               <Button asChild>
